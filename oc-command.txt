@@ -1,0 +1,18 @@
+oc new-project test1;
+oc new-project test2;
+oc status;
+oc project test1;
+oc status;
+oc get all;
+oc get pods
+oc get service;
+oc expose service <service-name>
+oc get routes;
+oc create pod 
+oc create -f samplepod.yaml
+oc run <sample-pod> --image <image path> --port =8080
+------------------------------Deployment Config-----------------------------
+oc new-app --as-deployment-config --name springapp --docker-image dockerforrahul/playwithdocker
+oc new-app --as-deployment-config --name=java-hello https://github.com/rahulbiswaser/playWithDocker  
+oc new-app --as-deployment-config --name php-helloworld 
+php:7.3~https://github.com/${RHT_OCP4_GITHUB_USER}/DO180-apps --context-dir php-helloworld 

@@ -9,6 +9,7 @@ oc get service;
 oc expose service <service-name>
 oc get routes;
 oc create pod 
+------------------------------POD Creation-----------------------------
 oc create -f samplepod.yaml
 oc run <sample-pod> --image <image path> --port =8080
 ------------------------------Deployment Config-----------------------------

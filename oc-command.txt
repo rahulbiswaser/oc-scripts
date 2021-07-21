@@ -9,6 +9,7 @@ oc get service;
 oc expose service <service-name>
 oc get routes;
 oc create pod 
+oc get pod frontend-gtqsp -o yaml >abc.yaml  <Print an Output>
 ------------------------------POD Creation-----------------------------
 oc create -f samplepod.yaml
 oc run <sample-pod> --image <image path> --port =8080

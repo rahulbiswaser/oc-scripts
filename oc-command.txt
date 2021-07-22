@@ -18,3 +18,13 @@ oc new-app --as-deployment-config --name springapp --docker-image dockerforrahul
 oc new-app --as-deployment-config --name=java-hello https://github.com/rahulbiswaser/playWithDocker  
 oc new-app --as-deployment-config --name php-helloworld 
 php:7.3~https://github.com/${RHT_OCP4_GITHUB_USER}/DO180-apps --context-dir php-helloworld 
+
+------------------------------Configmap-----------------------------
+oc create -f configmap.yaml
+oc create configmap newmap  --from-literal name=Demo \
+> --from-literal surname=Demo1
+oc create configmap newmap1 --from-file sample.txt
+oc get configmap/newmap1 -o json
+oc get configmap/newmap1 -o json > abc.json
+oc edit cm/newmap1
+oc patch configmap/newmap1 --patch '{"data":{"surname":"newvalue1"}}'
